@@ -6,7 +6,9 @@ final homeUrl = Uri.parse('https://blog.codefactory.ai');
 class HomeScreen extends StatelessWidget {
   // .. 실행한 결과를 반환하는 대신 실행한 대상을 반환하라는 의미
   WebViewController controller = WebViewController()
-  ..loadRequest(homeUrl);
+    ..setJavaScriptMode(JavaScriptMode.unrestricted)
+    ..loadRequest(homeUrl);
+
 
   HomeScreen({super.key});
 
